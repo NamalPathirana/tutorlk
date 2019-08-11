@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    app:cardCornerRadius="12dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_margin="4dp"
+        >
+
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:id="@+id/Content_img"
+            android:layout_width="60dp"
+            android:layout_height="68dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="17dp"
+            android:src="@drawable/ic_layers_black_24dp"
+            app:siBorderColor="@color/MainBackground"
+            app:siBorderWidth="6dp" />
+
+        <TextView
+            android:id="@+id/content_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="74dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/headerText"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="Content Name" />
+
+        <TextView
+            android:id="@+id/content_type"
+            android:layout_width="154dp"
+            android:layout_height="21dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="39dp"
+
+
+            android:layout_marginBottom="36dp"
+            android:layout_toEndOf="@+id/Content_img"
+            android:text="Type"
+            android:textColor="@color/headerText"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/con_author"
+            android:layout_width="154dp"
+            android:layout_height="21dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="66dp"
+
+
+            android:layout_marginBottom="9dp"
+            android:layout_toEndOf="@+id/Content_img"
+            android:text="Author"
+            android:textColor="@color/suppourtTextHigh"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

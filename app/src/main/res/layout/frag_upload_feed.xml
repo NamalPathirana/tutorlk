@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/MainBackground" >
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/suppourtText" />
+
+    <Button
+        android:id="@+id/content_upload_btn"
+        android:layout_width="115dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="276dp"
+        android:layout_marginTop="30dp"
+        android:capitalize="none"
+        android:text="Upload" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="9dp"
+        android:text="Upload content "
+        android:textColor="@color/headerText"
+        android:textSize="18sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_content_feed"
+        android:layout_width="match_parent"
+        android:layout_height="659dp"
+        android:layout_below="@+id/view"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="1dp" />
+
+</RelativeLayout>

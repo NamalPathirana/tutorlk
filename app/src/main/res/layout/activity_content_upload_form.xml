@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".contentUploadForm">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toobar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dp">
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="313dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="200dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="History,math...."
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="164dp"
+                android:text="Subject"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="296dp"
+                android:text="Subject"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="736dp"
+                android:hint="Brife Discription"
+                android:text="Brife Discription"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="928dp"
+                android:text="Discription"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="52dp"
+                android:text="Package name"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="314dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="88dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="Package name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="400dp"
+                android:text="Video"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBox3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="320dp"
+                android:text="Text"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="360dp"
+                android:text="Audio"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ScrollView
+                android:id="@+id/scrollView3"
+                android:layout_width="320dp"
+                android:layout_height="197dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="456dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:drawable/editbox_background"
+                        android:text="o/l pass papers.docs" />
+
+                    <TextView
+                        android:id="@+id/content2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:drawable/editbox_background"
+                        android:text="o/l pass papers.docs" />
+
+                    <TextView
+                        android:id="@+id/content3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:drawable/editbox_background"
+                        android:text="o/l pass papers.docs" />
+
+                    <TextView
+                        android:id="@+id/content4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:drawable/editbox_background"
+                        android:text="o/l pass papers.docs" />
+
+                    <TextView
+                        android:id="@+id/content5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:drawable/editbox_background"
+                        android:text="o/l pass papers.docs" />
+
+                    <TextView
+                        android:id="@+id/content6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:drawable/editbox_background"
+                        android:text="o/l pass papers.docs" />
+
+                    <TextView
+                        android:id="@+id/content7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:drawable/editbox_background"
+                        android:text="o/l pass papers.docs" />
+
+                    <TextView
+                        android:id="@+id/content8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:drawable/editbox_background"
+                        android:text="o/l pass papers.docs" />
+
+                    <TextView
+                        android:id="@+id/content9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@android:drawable/editbox_background"
+                        android:text="o/l pass papers.docs" />
+                </LinearLayout>
+            </ScrollView>
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="304dp"
+                android:layout_height="115dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="976dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Example,  package contains.  To whom package  useful and how they could use it."
+                android:inputType="text|textMultiLine"
+                android:textAlignment="inherit"
+                android:textSize="14sp"
+                android:verticalScrollbarPosition="right"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="75dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="260dp"
+                android:layout_marginTop="652dp"
+                android:text="ADD"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="306dp"
+                android:layout_height="115dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="776dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:gravity="top"
+                android:hint="Example, whom this package for and why they need it.                                                        50 words"
+                android:inputType="text|textMultiLine"
+                android:textAlignment="inherit"
+                android:verticalScrollbarPosition="right"
+                app:layout_constraintStart_toStartOf="parent"
+
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/Tutor_account"
+                android:layout_width="144dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="116dp"
+                android:layout_marginTop="1132dp"
+                android:layout_marginBottom="60dp"
+                android:background="@color/design_default_color_secondary"
+                android:text="Upload"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="319dp"
+                android:layout_height="54dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="652dp"
+                android:background="@color/suppourtText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

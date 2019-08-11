@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">tutorlk</string>
+    <string name="signOut">SignOut</string>
+    <string name="title_activity_choice">Choice</string>
+    <string name="drop_D">Ahotbrew.com - Dropdown</string>
+    <string-array name="brew_array">
+        <item>Student</item>
+        <item>Tutor</item>
+        <item>Account Recovery</item>
+
+    </string-array>
+</resources>

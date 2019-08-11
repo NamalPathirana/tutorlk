@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tutor_form">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toobar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="166dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dp">
+
+            <EditText
+                android:id="@+id/editText15"
+                android:layout_width="313dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="1064dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="First expertise..."
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="1032dp"
+                android:text="Subject of expertise"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText14"
+                android:layout_width="313dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="1104dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="Second expertise...."
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="652dp"
+                android:text="Education qualifications"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="904dp"
+                android:text="Address"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText13"
+                android:layout_width="313dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="696dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="Education qualifications"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText12"
+                android:layout_width="313dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="748dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="Education qualifications"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText10"
+                android:layout_width="313dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="564dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="V123.."
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="276dp"
+                android:text="Email"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_width="313dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="944dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="Address..."
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText11"
+                android:layout_width="313dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="804dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="Education qualifications"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="313dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="312dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="example@gmail.com.."
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="168dp"
+                android:text="Surname"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="313dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="204dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="Surname"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="313dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="440dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="DD/MM/YY"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="512dp"
+                android:text="Nic"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="392dp"
+                android:text="Date of birth"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="1184dp"
+                android:hint="Brife Discription"
+                android:text="Notable remarks"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="52dp"
+                android:text="First name"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="314dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="88dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="First name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="304dp"
+                android:layout_height="115dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="1228dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:gravity="top"
+                android:inputType="text|textMultiLine"
+                android:textAlignment="inherit"
+                android:textSize="14sp"
+                android:verticalScrollbarPosition="right"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/Tutor_account"
+                android:layout_width="144dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="132dp"
+                android:layout_marginTop="1372dp"
+                android:layout_marginBottom="80dp"
+                android:background="@color/design_default_color_secondary"
+                android:text="Create"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
