@@ -3,6 +3,7 @@
     <string name="signOut">SignOut</string>
     <string name="title_activity_choice">Choice</string>
     <string name="drop_D">Ahotbrew.com - Dropdown</string>
+    <string name="TPname">Name</string>
     <string-array name="brew_array">
         <item>Student</item>
         <item>Tutor</item>

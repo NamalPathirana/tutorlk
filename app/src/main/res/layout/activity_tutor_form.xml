@@ -14,19 +14,19 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="166dp">
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="86dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="380dp">
 
             <EditText
-                android:id="@+id/editText15"
+                android:id="@+id/tutorexp1"
                 android:layout_width="313dp"
                 android:layout_height="36dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="1064dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="992dp"
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:hint="First expertise..."
@@ -38,19 +38,56 @@
                 android:id="@+id/textView22"
                 android:layout_width="257dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="1032dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="948dp"
                 android:text="Subject of expertise"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="1136dp"
+                android:text="Upload profile pic"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="385dp"
+                android:layout_height="16dp"
+                android:layout_above="@+id/button_upload"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="28dp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:ignore="MissingConstraints" />
+
+
+            <Button
+                android:id="@+id/button_upload"
+                android:layout_width="335dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="48dp"
+                android:text="upload"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
             <EditText
-                android:id="@+id/editText14"
+                android:id="@+id/tutorexp2"
                 android:layout_width="313dp"
                 android:layout_height="36dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="1104dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="1028dp"
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:hint="Second expertise...."
@@ -73,15 +110,15 @@
                 android:id="@+id/textView15"
                 android:layout_width="257dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="904dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="788dp"
                 android:text="Address"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editText13"
+                android:id="@+id/tutorEduQulify"
                 android:layout_width="313dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="36dp"
@@ -94,20 +131,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editText12"
-                android:layout_width="313dp"
-                android:layout_height="36dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="748dp"
-                android:background="@android:drawable/editbox_background"
-                android:ems="10"
-                android:hint="Education qualifications"
-                android:inputType="textPersonName"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/editText10"
+                android:id="@+id/tutorNIC"
                 android:layout_width="313dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="36dp"
@@ -125,17 +149,17 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="276dp"
-                android:text="Email"
+                android:text="PhoneNumber"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editText9"
+                android:id="@+id/tutorAddress"
                 android:layout_width="313dp"
                 android:layout_height="36dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="944dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="844dp"
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:hint="Address..."
@@ -144,57 +168,20 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editText11"
-                android:layout_width="313dp"
-                android:layout_height="36dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="804dp"
-                android:background="@android:drawable/editbox_background"
-                android:ems="10"
-                android:hint="Education qualifications"
-                android:inputType="textPersonName"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/editText7"
+                android:id="@+id/tutorPhoneNumber"
                 android:layout_width="313dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="36dp"
                 android:layout_marginTop="312dp"
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
-                android:hint="example@gmail.com.."
-                android:inputType="textPersonName"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="257dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="168dp"
-                android:text="Surname"
-                android:textSize="16sp"
+                android:inputType="number|textPersonName"
+                android:text="+94"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editText6"
-                android:layout_width="313dp"
-                android:layout_height="36dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="204dp"
-                android:background="@android:drawable/editbox_background"
-                android:ems="10"
-                android:hint="Surname"
-                android:inputType="textPersonName"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/editText4"
+                android:id="@+id/tutorDOB"
                 android:layout_width="313dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="32dp"
@@ -202,7 +189,7 @@
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:hint="DD/MM/YY"
-                android:inputType="textPersonName"
+                android:inputType="date|textPersonName"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -232,8 +219,8 @@
                 android:id="@+id/textView12"
                 android:layout_width="257dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="44dp"
-                android:layout_marginTop="1184dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="1312dp"
                 android:hint="Brife Discription"
                 android:text="Notable remarks"
                 android:textSize="16sp"
@@ -244,36 +231,36 @@
                 android:id="@+id/textView9"
                 android:layout_width="257dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="52dp"
-                android:text="First name"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="156dp"
+                android:text="Name"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/tutorName"
                 android:layout_width="314dp"
                 android:layout_height="39dp"
                 android:layout_marginStart="28dp"
-                android:layout_marginTop="88dp"
+                android:layout_marginTop="204dp"
                 android:layout_marginEnd="8dp"
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
-                android:hint="First name"
+                android:hint="name"
                 android:inputType="textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.065"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editText2"
-                android:layout_width="304dp"
-                android:layout_height="115dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="1228dp"
+                android:id="@+id/tutorNotable"
+                android:layout_width="306dp"
+                android:layout_height="154dp"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="1356dp"
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:gravity="top"
@@ -283,21 +270,23 @@
                 android:verticalScrollbarPosition="right"
 
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                />
 
             <Button
-                android:id="@+id/Tutor_account"
+                android:id="@+id/btnCreateAccount"
                 android:layout_width="144dp"
                 android:layout_height="52dp"
                 android:layout_marginStart="132dp"
-                android:layout_marginTop="1372dp"
+                android:layout_marginTop="1564dp"
                 android:layout_marginBottom="80dp"
                 android:background="@color/design_default_color_secondary"
                 android:text="Create"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

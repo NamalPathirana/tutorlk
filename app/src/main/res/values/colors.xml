@@ -9,5 +9,13 @@
     <color name="suppourtText">#BEBABA</color>
     <color name="suppourtTextHigh">#0DD2D2</color>
     <color name="viewbox">#BFF68A</color>
-    <color name="startupgreen">#CFF6B3</color>
+    <color name="tab_Alert_text">#FFC107</color>
+    <color name="greenback">#F0FBEE</color>
+    <color name="startblue">#09c6df</color>
+    <color name="endblue">#0bcce6</color>
+    <color name="gitred">#FF4081</color>
+    <color name="gitblack">#292b3d</color>
+    <color name="graylight">#fafafafa</color>
+    <color name="signUp">#EBEBEB</color>
+
 </resources>

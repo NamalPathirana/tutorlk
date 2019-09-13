@@ -30,7 +30,7 @@ public class StudentFrag extends Fragment {
 
         final ArrayList <Student_tab> studentList =new ArrayList<>();
 
-        studentList.add(new Student_tab(R.drawable.studentpic,"Jack nicolson","o/l student"));
+        studentList.add(new Student_tab(R.drawable.studentpic,"Jack nicolson","o/l studentcapicon"));
         studentList.add(new Student_tab(R.drawable.stud2,"Ramdom Guy","postgraduate"));
         studentList.add(new Student_tab(R.drawable.studentpic,"Student 3","Education"));
         studentList.add(new Student_tab(R.drawable.studentpic,"Student 4","Education"));

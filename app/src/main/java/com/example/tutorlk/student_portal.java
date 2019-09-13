@@ -24,7 +24,7 @@ public class student_portal extends AppCompatActivity {
 
         ArrayList<Student_tab> studentListDB=new ArrayList<>();
 
-        studentListDB.add(new Student_tab(R.drawable.studentpic,"Jack nicolson","o/l student"));
+        studentListDB.add(new Student_tab(R.drawable.studentpic,"Jack nicolson","o/l studentcapicon"));
         studentListDB.add(new Student_tab(R.drawable.stud2,"Ramdom Guy","postgraduate"));
         studentListDB.add(new Student_tab(R.drawable.studentpic,"Student 3","Education"));
         studentListDB.add(new Student_tab(R.drawable.studentpic,"Student 4","Education"));

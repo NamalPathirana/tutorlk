@@ -10,21 +10,26 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
-import android.widget.AdapterView.OnItemSelectedListener;
-
 
 
 import android.view.View;
-
-
+import android.widget.Toast;
 
 
 public class Choice extends AppCompatActivity {
+
+
+    String type;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice);
+
+
+
 
         Toolbar toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -43,39 +48,56 @@ public class Choice extends AppCompatActivity {
         // Apply the adapter to the spinner
         staticSpinner.setAdapter(staticAdapter);
 
-//        Spinner dynamicSpinner = (Spinner) findViewById(R.id.dynamic_spinner);
+        Spinner dynamicSpinner = (Spinner) findViewById(R.id.static_spinner);
 
-        String[] items = new String[] { "Chai Latte", "Green Tea", "Black Tea" };
+        String[] items = new String[] { "Tutor","Student" };
 
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                 android.R.layout.simple_spinner_item, items);
 
-//        dynamicSpinner.setAdapter(adapter);
-//
-//        dynamicSpinner.setOnItemSelectedListener(new OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view,
-//                                       int position, long id) {
-//                Log.v("item", (String) parent.getItemAtPosition(position));
-//            }
+        dynamicSpinner.setAdapter(adapter);
 
-//                @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//                // TODO Auto-generated method stub
-//            }
-//        });
-
-
-        Button btn=findViewById(R.id.select_user_type);
-
-        btn.setOnClickListener(new View.OnClickListener() {
+        dynamicSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onClick(View view) {
+            public void onItemSelected(AdapterView<?> parent, View view,
+                                       int position, long id) {
+                Log.v("item", (String) parent.getItemAtPosition(position));
 
-                Intent intent=new Intent(view.getContext(),Tutor_form.class);
-                startActivity(intent);
+                type=(String) parent.getItemAtPosition(position);
+
+                Button btn=findViewById(R.id.btnLogin);
+
+                btn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                        if(type.equalsIgnoreCase("Tutor")) {
+
+                            Intent intent=getIntent();
+                            String email=intent.getExtras().getString("email");
+                           Toast.makeText(Choice.this,email,Toast.LENGTH_SHORT).show();
+
+                            Intent i = new Intent(view.getContext(), Tutor_form.class);
+                            i.putExtra("email",email);
+                            startActivity(i);
+                        }
+                        else if(type.equalsIgnoreCase("Student"))
+                            Toast.makeText(Choice.this,"Student not ready",Toast.LENGTH_LONG).show();
+
+                    }
+                });
+
+
+            }
+
+                @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                // TODO Auto-generated method stub
             }
         });
+
+
+
 
 
 
