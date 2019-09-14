@@ -50,7 +50,7 @@
                 android:layout_width="257dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="40dp"
-                android:layout_marginTop="1136dp"
+                android:layout_marginTop="1112dp"
                 android:text="Upload profile pic"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -58,14 +58,14 @@
 
 
             <ProgressBar
-                android:id="@+id/progress_bar"
+                android:id="@+id/TutorFormProgressBar"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="385dp"
-                android:layout_height="16dp"
-                android:layout_above="@+id/button_upload"
+                android:layout_width="392dp"
+                android:layout_height="17dp"
+                android:layout_above="@+id/btnChooseTutorimage"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="28dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="624dp"
                 android:visibility="visible"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -73,11 +73,11 @@
 
 
             <Button
-                android:id="@+id/button_upload"
-                android:layout_width="335dp"
-                android:layout_height="47dp"
+                android:id="@+id/btnChooseTutorimage"
+                android:layout_width="341dp"
+                android:layout_height="37dp"
                 android:layout_marginStart="36dp"
-                android:layout_marginTop="48dp"
+                android:layout_marginTop="176dp"
                 android:text="upload"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -220,7 +220,7 @@
                 android:layout_width="257dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="48dp"
-                android:layout_marginTop="1312dp"
+                android:layout_marginTop="1384dp"
                 android:hint="Brife Discription"
                 android:text="Notable remarks"
                 android:textSize="16sp"
@@ -259,8 +259,8 @@
                 android:id="@+id/tutorNotable"
                 android:layout_width="306dp"
                 android:layout_height="154dp"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="1356dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="1428dp"
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:gravity="top"
@@ -280,13 +280,21 @@
                 android:layout_width="144dp"
                 android:layout_height="52dp"
                 android:layout_marginStart="132dp"
-                android:layout_marginTop="1564dp"
-                android:layout_marginBottom="80dp"
+                android:layout_marginTop="1668dp"
                 android:background="@color/design_default_color_secondary"
                 android:text="Create"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/TutorProfilePic"
+                android:layout_width="155dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="128dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:srcCompat="@tools:sample/avatars" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
