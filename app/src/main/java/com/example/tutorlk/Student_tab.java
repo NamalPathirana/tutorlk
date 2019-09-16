@@ -5,33 +5,109 @@ import android.content.Intent;
 
 public class Student_tab {
 
-    private int mImageResource;
-    private String mText1;
-    private String mText2;
+    private String imageUrl;
+    private String name;
+    private String educationalState;
+    private String address;
+    private String dateOfBirth;
+    private String notableRemarks;
+    private int phoneNumber;
+    private String email;
+    private String uid;
+    private String nic;
 
-    public Student_tab(int mImageResource, String mText1, String mText2) {
-        this.mImageResource = mImageResource;
-        this.mText1 = mText1;
-        this.mText2 = mText2;
+
+
+    public Student_tab (){}
+
+    public String getNic() {
+        return nic;
     }
 
-    public int getmImageResource() {
-        return mImageResource;
+    public void setNic(String nic) {
+        this.nic = nic;
     }
 
-    public String getmText1() {
-        return mText1;
+    public String getUid() {
+        return uid;
     }
 
-    public String getmText2() {
-        return mText2;
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public void setDateOfBirth(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public String getNotableRemarks() {
+        return notableRemarks;
+    }
+
+    public void setNotableRemarks(String notableRemarks) {
+        this.notableRemarks = notableRemarks;
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+
+
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEducationalState() {
+        return educationalState;
+    }
+
+    public void setEducationalState(String educationalState) {
+        this.educationalState = educationalState;
     }
 
     public void OpentStudentportal(Context context, String name){
 
-        String Sid=name;
+        String Sid=name;                                            //get user id
         Intent intent=new Intent(context,student_portal.class);
-        intent.putExtra("Studentid",Sid.trim());
+        intent.putExtra("uid",Sid.trim());                   //set uid
         context.startActivity(intent);
 
 

@@ -29,6 +29,8 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 import com.squareup.picasso.Picasso;
 
 public class tutorProfile extends AppCompatActivity {
@@ -42,6 +44,7 @@ public class tutorProfile extends AppCompatActivity {
     ProgressBar bar;
     ImageView propic;
 
+    private FirebaseStorage mStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,7 +75,10 @@ public class tutorProfile extends AppCompatActivity {
 
         firebaseAuth = FirebaseAuth.getInstance();
 
+        mStorage = FirebaseStorage.getInstance();
+
         final String uid=firebaseAuth.getCurrentUser().getUid();
+        final String[] imageUrl = new String[1];
 
         dbRef= FirebaseDatabase.getInstance().getReference().child("Tutor").child(uid);
 
@@ -103,6 +109,10 @@ public class tutorProfile extends AppCompatActivity {
                     tutor.setDisLikes(Integer.parseInt(dataSnapshot.child("disLikes").getValue().toString()));
                     tutor.setViews(Integer.parseInt(dataSnapshot.child("views").getValue().toString()));
                     tutor.setEmail(dataSnapshot.child("email").getValue().toString());
+                    tutor.setUid(dataSnapshot.child("uid").getValue().toString());
+                    tutor.setImageUrl(dataSnapshot.child("imageUrl").getValue().toString());
+
+                    imageUrl[0] =dataSnapshot.child("imageUrl").getValue().toString();
 
 
 
@@ -227,6 +237,9 @@ public class tutorProfile extends AppCompatActivity {
                                                         public void onComplete(@NonNull Task<Void> task) {
 
                                                             if (task.isSuccessful()) {
+
+                                                                StorageReference imageRef = mStorage.getReferenceFromUrl(imageUrl[0]);
+                                                                imageRef.delete();
 
                                                                 dbRef =FirebaseDatabase.getInstance().getReference().child("Tutor");
                                                                 dbRef.child(uid).removeValue();

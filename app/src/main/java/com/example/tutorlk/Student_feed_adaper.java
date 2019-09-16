@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 
 public class Student_feed_adaper extends RecyclerView.Adapter<Student_feed_adaper.ExampleViewHolder>{
@@ -104,9 +106,9 @@ public class Student_feed_adaper extends RecyclerView.Adapter<Student_feed_adape
 
       Student_tab currentStudent =mStudentList.get(position);
 
-      holder.mimageView.setImageResource(currentStudent.getmImageResource());
-      holder.mTextView1.setText(currentStudent.getmText1());
-      holder.mTextView2.setText(currentStudent.getmText2());
+      Picasso.get().load(currentStudent.getImageUrl()).into(holder.mimageView);
+      holder.mTextView1.setText(currentStudent.getName());
+      holder.mTextView2.setText(currentStudent.getEducationalState());
     }
 
     @Override

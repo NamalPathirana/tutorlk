@@ -81,8 +81,15 @@ public class Choice extends AppCompatActivity {
                             i.putExtra("email",email);
                             startActivity(i);
                         }
-                        else if(type.equalsIgnoreCase("Student"))
-                            Toast.makeText(Choice.this,"Student not ready",Toast.LENGTH_LONG).show();
+                        else if(type.equalsIgnoreCase("Student")) {
+                            Intent intent = getIntent();
+                            String email = intent.getExtras().getString("email");
+                            Toast.makeText(Choice.this, email, Toast.LENGTH_SHORT).show();
+
+                            Intent i = new Intent(view.getContext(), Student_form.class);
+                            i.putExtra("email", email);
+                            startActivity(i);
+                        }
 
                     }
                 });

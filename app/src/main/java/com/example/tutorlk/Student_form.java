@@ -4,12 +4,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
-import com.google.firebase.storage.StorageReference;
-
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
@@ -24,13 +18,18 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.tutorlk.model.tutorDetails;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
-public class Tutor_form extends AppCompatActivity {
+public class Student_form extends AppCompatActivity {
 
     private static final int PICK_IMAGE_REQUEST = 1;
 
@@ -51,11 +50,13 @@ public class Tutor_form extends AppCompatActivity {
     private StorageTask mUploadTask;
     FirebaseAuth firebaseAuth;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tutor_form);
-
+        setContentView(R.layout.activity_student_form);
         Toolbar toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -66,23 +67,25 @@ public class Tutor_form extends AppCompatActivity {
         mStorageRef = FirebaseStorage.getInstance().getReference("profilePics");
 //        mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");  //in video
 
-        mButtonChooseImage=findViewById(R.id.btnChooseTutorimage);
-        mProgressBar=findViewById(R.id.TutorFormProgressBar);
-        mImageView=findViewById(R.id.TutorProfilePic);
+        mButtonChooseImage=findViewById(R.id.btnstdFormUploadPic);
+        mProgressBar=findViewById(R.id.btnstdFormprogressbar);
+        mImageView=findViewById(R.id.stdFromPic);
 
-        phonenumber=findViewById(R.id.tutorPhoneNumber);
-        address=findViewById(R.id.tutorAddress);
-        nic=findViewById(R.id.tutorNIC);
-        DOB=findViewById(R.id.tutorDOB);
-        EducationQ=findViewById(R.id.tutorEduQulify);
-        sub1=findViewById(R.id.tutorexp1);
-        sub2=findViewById(R.id.tutorexp2);
-        Remarks=findViewById(R.id.tutorNotable);
-        name=findViewById(R.id.tutorName);
+        phonenumber=findViewById(R.id.stdFormNumber);
+        address=findViewById(R.id.stdFormAddress);
+        nic=findViewById(R.id.stdFormNIC);
+        DOB=findViewById(R.id.stdFromDateOfBirth);
+        EducationQ=findViewById(R.id.stdFormEducationalState);
+        Remarks=findViewById(R.id.stdFormRemarks);
+        name=findViewById(R.id.stdFormNumber);
 
 
         Intent i=getIntent();
         final String email=i.getExtras().getString("email");
+
+
+
+
 
         mButtonChooseImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,7 +99,8 @@ public class Tutor_form extends AppCompatActivity {
 
 
 
-        Button btn=findViewById(R.id.btnCreateAccount);
+
+        Button btn=findViewById(R.id.btnStdCreateAccount);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,7 +108,7 @@ public class Tutor_form extends AppCompatActivity {
 
 
                 if (mUploadTask != null && mUploadTask.isInProgress()) {
-                    Toast.makeText(Tutor_form.this, "Upload in progress", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Student_form.this, "Upload in progress", Toast.LENGTH_SHORT).show();
                 } else {
                     uploadFile(email,uid);
                 }
@@ -115,6 +119,7 @@ public class Tutor_form extends AppCompatActivity {
 
 
     }
+
 
     private void openFileChooser() {
         Intent intent = new Intent();
@@ -172,43 +177,33 @@ public class Tutor_form extends AppCompatActivity {
                                     Uri downloadUrl = uri;
 
 
-                                    tutorDetails tob= new tutorDetails();
-
-                                    try {
-
-                                        tob.setUid(uid);
-                                        tob.setImageUrl(downloadUrl.toString());
-                                        tob.setEmail(email);                                                            //email will be added from the previous activ
-                                        tob.setPhoneNumber(Integer.parseInt(phonenumber.getText().toString().trim()));
-                                        tob.setAddress(address.getText().toString().trim());
-                                        tob.setDateOfBirth(DOB.getText().toString().trim());
-                                        tob.setEducationQualification(EducationQ.getText().toString().trim());
-                                        tob.setName(name.getText().toString().trim());
-                                        tob.setNic(nic.getText().toString().trim());
-                                        tob.setNotableRemarks(Remarks.getText().toString().trim());
-                                        tob.setSub1(sub1.getText().toString().trim());
-                                        tob.setSub2(sub2.getText().toString().trim());
+                                    Student_tab sob= new Student_tab();
 
 
-                                        dbRef = FirebaseDatabase.getInstance().getReference().child("Tutor").child(uid);
-                                        dbRef.setValue(tob);
-                                        Intent intent = new Intent(Tutor_form.this, Login.class);
+                                    sob.setUid(uid);
+                                    sob.setImageUrl(downloadUrl.toString());
+                                    sob.setEmail(email);                                                            //email will be added from the previous activ
+                                    sob.setPhoneNumber(Integer.parseInt(phonenumber.getText().toString().trim()));
+                                    sob.setAddress(address.getText().toString().trim());
+                                    sob.setDateOfBirth(DOB.getText().toString().trim());
+                                    sob.setEducationalState(EducationQ.getText().toString().trim());
+                                    sob.setName(name.getText().toString().trim());
+                                    sob.setNotableRemarks(Remarks.getText().toString().trim());
+                                    sob.setNic(nic.getText().toString().trim());
 
-                                        startActivity(intent);
 
-                                        Toast.makeText(Tutor_form.this, "Upload successful", Toast.LENGTH_LONG).show();
 
-                                    }catch (NumberFormatException e)
-                                    {
-
-                                        Toast.makeText(Tutor_form.this,"please enter a correct number ",Toast.LENGTH_LONG).show();
-
-                                    }
+                                    dbRef= FirebaseDatabase.getInstance().getReference().child("Student").child(uid);
+                                    dbRef.setValue(sob);
+                                    Intent intent=new Intent(Student_form.this,Login.class);
+                                    startActivity(intent);
 
 
 
 
-                                   // Toast.makeText(getBaseContext(), "Upload success! URL - " + downloadUrl.toString() , Toast.LENGTH_SHORT).show();
+
+                                    Toast.makeText(Student_form.this, "Upload successful", Toast.LENGTH_LONG).show();
+                                    // Toast.makeText(getBaseContext(), "Upload success! URL - " + downloadUrl.toString() , Toast.LENGTH_SHORT).show();
                                 }
                             });
 
@@ -225,7 +220,7 @@ public class Tutor_form extends AppCompatActivity {
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(Tutor_form.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Student_form.this, e.getMessage(), Toast.LENGTH_SHORT).show();
                         }
                     })
                     .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
@@ -242,13 +237,6 @@ public class Tutor_form extends AppCompatActivity {
 
 
 
-        public  String encodeUserEmail(String userEmail) {
-        return userEmail.replace(".", ",");
-    }
-
-    static String decodeUserEmail(String userEmail) {
-        return userEmail.replace(",", ".");
-    }
 
 
 }

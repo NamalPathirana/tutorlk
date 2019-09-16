@@ -7,7 +7,6 @@
     <dist:module dist:instant="true" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:name=".Home"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,8 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".userProfile"></activity>
+        <activity android:name=".Student_form"></activity>
+        <activity android:name=".userProfile" />
         <activity android:name=".ForgotPasswordActivity" />
         <activity android:name=".Tutor_form" />
         <activity android:name=".Choice" />
@@ -24,18 +25,14 @@
         <activity
             android:name=".Login"
             android:screenOrientation="portrait" />
-
         <activity android:name=".contentUploadForm" />
         <activity android:name=".student_portal" />
-        <activity android:name=".Tutor"
-            android:screenOrientation="portrait"
-            />
-
-        <activity android:name=".tutorProfile"
-                  android:screenOrientation="portrait"
-
-            />
-
+        <activity
+            android:name=".Tutor"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tutorProfile"
+            android:screenOrientation="portrait" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

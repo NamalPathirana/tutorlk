@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.Toast;
 
 
 import androidx.annotation.NonNull;
@@ -13,7 +13,14 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
+import java.util.List;
 import java.util.zip.Inflater;
 
 public class StudentFrag extends Fragment {
@@ -21,6 +28,10 @@ public class StudentFrag extends Fragment {
     private RecyclerView sRecycleView;
     private Student_feed_adaper mAdapter;                                    //private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    private List<Student_tab> studs;
+
+    private DatabaseReference mDatabaseRef;
+
 
     @Nullable
     @Override
@@ -28,44 +39,68 @@ public class StudentFrag extends Fragment {
 
         final View view = inflater.inflate(R.layout.frag_student_feed,container,false);
 
-        final ArrayList <Student_tab> studentList =new ArrayList<>();
-
-        studentList.add(new Student_tab(R.drawable.studentpic,"Jack nicolson","o/l studentcapicon"));
-        studentList.add(new Student_tab(R.drawable.stud2,"Ramdom Guy","postgraduate"));
-        studentList.add(new Student_tab(R.drawable.studentpic,"Student 3","Education"));
-        studentList.add(new Student_tab(R.drawable.studentpic,"Student 4","Education"));
-        studentList.add(new Student_tab(R.drawable.studentpic,"Student 5","Education"));
-        studentList.add(new Student_tab(R.drawable.studentpic,"Student 6","Education"));
-        studentList.add(new Student_tab(R.drawable.studentpic,"Student 7","Education"));
-        studentList.add(new Student_tab(R.drawable.studentpic,"Student 8","Education"));
-        studentList.add(new Student_tab(R.drawable.studentpic,"Student 9","Education"));
-        studentList.add(new Student_tab(R.drawable.studentpic,"Student 10","Education"));
-        studentList.add(new Student_tab(R.drawable.studentpic,"Student 11","Education"));
-
-
 
 
 
         sRecycleView = (RecyclerView) view.findViewById(R.id.recyclerView_student_feed);
         sRecycleView.setHasFixedSize(true);
         mLayoutManager =new LinearLayoutManager(getActivity());
-        mAdapter=new Student_feed_adaper(studentList);
-
 
         sRecycleView.setLayoutManager((mLayoutManager));
-        sRecycleView.setAdapter(mAdapter);
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Student");
 
-        mAdapter.setOnIemClickListner(new Student_feed_adaper.onItemClickLIstner() {
+        final ArrayList <Student_tab> studentList =new ArrayList<>();
+
+
+        mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onItemClick(int position) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                String studentid=studentList.get(position).getmText1();
-                studentList.get(position).OpentStudentportal(view.getContext(),studentid);
+            for (DataSnapshot postSpan : dataSnapshot.getChildren()){
 
+            Student_tab stud=postSpan.getValue(Student_tab.class);
+            studentList.add(stud);
 
 
             }
+
+                mAdapter= new Student_feed_adaper(studentList);
+                sRecycleView.setAdapter(mAdapter);
+
+                mAdapter.setOnIemClickListner(new Student_feed_adaper.onItemClickLIstner() {
+                    @Override
+                    public void onItemClick(int position) {
+
+                        String studentid=studentList.get(position).getUid();
+                        studentList.get(position).OpentStudentportal(view.getContext(),studentid);
+
+
+                    }
+                });
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                Toast.makeText(getContext(), databaseError.getMessage(), Toast.LENGTH_SHORT).show();
+                //mProgressCircle.setVisibility(View.INVISIBLE);
+
+            }
         });
+
+
+
+
+
+
+//
+//        mAdapter=new Student_feed_adaper(studentList);
+//
+//        sRecycleView.setAdapter(mAdapter);
+//
+
 
         return view;
     }

@@ -16,8 +16,17 @@ public class tutorDetails{
     private int likes=0;
     private int disLikes=0;
     private int views=0;
+    private String uid;
 
     public tutorDetails(){};
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
+    }
 
     public int getViews() {
         return views;
