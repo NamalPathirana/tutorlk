@@ -77,7 +77,7 @@ public class Student_form extends AppCompatActivity {
         DOB=findViewById(R.id.stdFromDateOfBirth);
         EducationQ=findViewById(R.id.stdFormEducationalState);
         Remarks=findViewById(R.id.stdFormRemarks);
-        name=findViewById(R.id.stdFormNumber);
+        name=findViewById(R.id.stdFormName);
 
 
         Intent i=getIntent();

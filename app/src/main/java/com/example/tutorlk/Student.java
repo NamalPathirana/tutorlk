@@ -23,7 +23,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class Tutor extends AppCompatActivity {
+public class Student extends AppCompatActivity {
 
 
     Button userLogout=null;
@@ -31,7 +31,7 @@ public class Tutor extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tutor);
+        setContentView(R.layout.activity_student);
 
         Toolbar toolbar=findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -45,10 +45,10 @@ public class Tutor extends AppCompatActivity {
 
         Toast.makeText(this,firebaseUser.getEmail(),Toast.LENGTH_SHORT).show();
 
-        BottomNavigationView bottomNavigationView=findViewById(R.id.top_navigation);
+        BottomNavigationView bottomNavigationView=findViewById(R.id.top_navigation_tutor);
         bottomNavigationView.setOnNavigationItemSelectedListener(navListner);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new StudentFrag()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_std,new TutorFrag()).commit();
 
         //---------Signout---------((( onclick don't work for items on the toolbar)))
 
@@ -75,34 +75,34 @@ public class Tutor extends AppCompatActivity {
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListner=new BottomNavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
-                    Fragment selectefFragment=null;
+            Fragment selectefFragment=null;
 
-                    switch (item.getItemId()){
-
-
-                        case R.id.nav_student_tab:
-                            selectefFragment=new StudentFrag();
-                            break;
-
-                        case R.id.nav_upload_tab:
-                            selectefFragment=new UploadFrag();
-                            break;
-
-                        case R.id.nav_course_tab:
-                            selectefFragment=new Coursefrag();
-                            break;
-
-                    }
-
-                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectefFragment).commit();
+            switch (item.getItemId()){
 
 
-                    return true;
-                }
-            };
+                case R.id.std_nav_tutor_tab:
+                    selectefFragment=new TutorFrag();
+                    break;
+
+                case R.id.std_nav_download_tab:
+                    selectefFragment=new UploadFrag();
+                    break;
+
+                case R.id.nav_course_tab:
+                    selectefFragment=new Coursefrag();
+                    break;
+
+            }
+
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectefFragment).commit();
+
+
+            return true;
+        }
+    };
 
 
 
@@ -122,20 +122,19 @@ public class Tutor extends AppCompatActivity {
         int id =item.getItemId();
 
         if(id==R.id.btnSignout) {
-            AlertDialog.Builder a_builder = new AlertDialog.Builder(Tutor.this);
+            AlertDialog.Builder a_builder = new AlertDialog.Builder(Student.this);
             a_builder.setMessage("Do you want to Sign out ? ")
                     .setCancelable(false)
                     .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
 
-                            Toast.makeText(Tutor.this, "Login Out", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Student.this, "Login Out", Toast.LENGTH_SHORT).show();
                             FirebaseAuth.getInstance().signOut();
-                            Intent intent = new Intent(Tutor.this, MainActivity.class);
+                            Intent intent = new Intent(Student.this, MainActivity.class);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
-                            finish();
 
                         }
                     })
@@ -155,9 +154,9 @@ public class Tutor extends AppCompatActivity {
         }
         else if(id==R.id.account) {
             Toast.makeText(this, "accounts", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(Tutor.this,tutorProfile.class);
+            Intent intent = new Intent(Student.this,tutorProfile.class);
             startActivity(intent);
-            }
+        }
 
         return super.onOptionsItemSelected(item);
     }

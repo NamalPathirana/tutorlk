@@ -11,18 +11,18 @@
         android:id="@+id/toolbar"
         layout="@layout/toobar"/>
 
+
     <FrameLayout
-        android:id="@+id/fragment_container"
+        android:id="@+id/fragment_container_std"
         android:layout_width="match_parent"
-        android:layout_height="535dp"
-        android:layout_above="@id/top_navigation"
+        android:layout_height="538dp"
+        android:layout_above="@id/top_navigation_tutor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/top_navigation" />
 
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/top_navigation"
+        android:id="@+id/top_navigation_tutor"
         android:layout_width="408dp"
         android:layout_height="64dp"
         android:layout_alignParentBottom="false"
@@ -33,7 +33,7 @@
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:menu="@menu/top_navigation"
+        app:menu="@menu/top_navigation_student"
 
 
         />

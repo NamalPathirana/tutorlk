@@ -4,11 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D5FFFFFF"
     tools:context=".Tutor_form">
-
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toobar" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -20,6 +17,27 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="380dp">
+
+            <Button
+                android:id="@+id/btnChooseTutorimage"
+                android:layout_width="341dp"
+                android:layout_height="37dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="176dp"
+                android:text="upload"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <Button
+                android:id="@+id/btnCreateAccount"
+                android:layout_width="144dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="132dp"
+                android:layout_marginTop="1668dp"
+                android:background="@color/design_default_color_secondary"
+                android:text="Create"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/tutorexp1"
@@ -34,54 +52,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView22"
-                android:layout_width="257dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="948dp"
-                android:text="Subject of expertise"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="257dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="1112dp"
-                android:text="Upload profile pic"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-
-            <ProgressBar
-                android:id="@+id/TutorFormProgressBar"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:layout_width="392dp"
-                android:layout_height="17dp"
-                android:layout_above="@+id/btnChooseTutorimage"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="624dp"
-                android:visibility="visible"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                tools:ignore="MissingConstraints" />
-
-
-            <Button
-                android:id="@+id/btnChooseTutorimage"
-                android:layout_width="341dp"
-                android:layout_height="37dp"
-                android:layout_marginStart="36dp"
-                android:layout_marginTop="176dp"
-                android:text="upload"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
-
             <EditText
                 android:id="@+id/tutorexp2"
                 android:layout_width="313dp"
@@ -95,27 +65,6 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="257dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="652dp"
-                android:text="Education qualifications"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="257dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
-                android:layout_marginTop="788dp"
-                android:text="Address"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/tutorEduQulify"
@@ -130,6 +79,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
             <EditText
                 android:id="@+id/tutorNIC"
                 android:layout_width="313dp"
@@ -140,17 +90,6 @@
                 android:ems="10"
                 android:hint="V123.."
                 android:inputType="textPersonName"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="257dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="276dp"
-                android:text="PhoneNumber"
-                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -189,9 +128,136 @@
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:hint="DD/MM/YY"
-                android:inputType="date|textPersonName"
+                android:inputType="date"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/tutorName"
+                android:layout_width="314dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="204dp"
+                android:layout_marginEnd="8dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:hint="name"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.065"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/tutorNotable"
+                android:layout_width="306dp"
+                android:layout_height="154dp"
+                android:layout_marginStart="52dp"
+                android:layout_marginTop="1428dp"
+                android:background="@android:drawable/editbox_background"
+                android:ems="10"
+                android:gravity="top"
+                android:inputType="text|textMultiLine"
+                android:textAlignment="inherit"
+                android:textSize="14sp"
+                android:verticalScrollbarPosition="right"
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+
+                />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="221dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="104dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
+
+            <ImageView
+                android:id="@+id/TutorProfilePic"
+                android:layout_width="155dp"
+                android:layout_height="125dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:ignore="MissingConstraints"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ProgressBar
+                android:id="@+id/TutorFormProgressBar"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="392dp"
+                android:layout_height="17dp"
+                android:layout_above="@+id/btnChooseTutorimage"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="496dp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="948dp"
+                android:text="Subject of expertise"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="1112dp"
+                android:text="Upload profile pic"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="652dp"
+                android:text="Education qualifications"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="788dp"
+                android:text="Address"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="257dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="276dp"
+                android:text="PhoneNumber"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
 
             <TextView
                 android:id="@+id/textView20"
@@ -237,65 +303,6 @@
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-
-
-            <EditText
-                android:id="@+id/tutorName"
-                android:layout_width="314dp"
-                android:layout_height="39dp"
-                android:layout_marginStart="28dp"
-                android:layout_marginTop="204dp"
-                android:layout_marginEnd="8dp"
-                android:background="@android:drawable/editbox_background"
-                android:ems="10"
-                android:hint="name"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.065"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/tutorNotable"
-                android:layout_width="306dp"
-                android:layout_height="154dp"
-                android:layout_marginStart="52dp"
-                android:layout_marginTop="1428dp"
-                android:background="@android:drawable/editbox_background"
-                android:ems="10"
-                android:gravity="top"
-                android:inputType="text|textMultiLine"
-                android:textAlignment="inherit"
-                android:textSize="14sp"
-                android:verticalScrollbarPosition="right"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-
-
-                />
-
-            <Button
-                android:id="@+id/btnCreateAccount"
-                android:layout_width="144dp"
-                android:layout_height="52dp"
-                android:layout_marginStart="132dp"
-                android:layout_marginTop="1668dp"
-                android:background="@color/design_default_color_secondary"
-                android:text="Create"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/TutorProfilePic"
-                android:layout_width="155dp"
-                android:layout_height="125dp"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="28dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView"
-                tools:ignore="MissingConstraints"
-                tools:srcCompat="@tools:sample/avatars" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

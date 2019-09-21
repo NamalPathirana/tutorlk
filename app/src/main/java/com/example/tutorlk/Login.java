@@ -16,6 +16,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Login extends AppCompatActivity {
 
@@ -28,6 +33,7 @@ public class Login extends AppCompatActivity {
     Button forgotPass;
 
     FirebaseAuth firebaseAuth;
+    DatabaseReference dbRef;
 
 
     @Override
@@ -68,8 +74,79 @@ public class Login extends AppCompatActivity {
                                     progressBar.setVisibility(View.GONE);
                                     if (task.isSuccessful()) {
                                         if (firebaseAuth.getCurrentUser().isEmailVerified()) {
-                                            startActivity(new Intent(Login.this, Tutor.class));
+
+                                           // Toast.makeText(Login.this,firebaseAuth.getUid(), Toast.LENGTH_LONG).show();
+
+                                            final String uid=firebaseAuth.getUid();
+
+                                            dbRef= FirebaseDatabase.getInstance().getReference(); // the process to find th correct user type
+
+
+                                            dbRef.child("Tutor").child(uid).addListenerForSingleValueEvent(new ValueEventListener() { // if a tutor
+                                                @Override
+                                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                                    if (dataSnapshot.hasChildren()) {
+
+                                                        startActivity(new Intent(Login.this, Tutor.class));
+                                                        finish();
+
+
+                                                    }
+
+                                                }
+
+                                                @Override
+                                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                                }
+                                            });
+
+                                            dbRef.child("Student").child(uid).addListenerForSingleValueEvent(new ValueEventListener() { //if a student
+                                                @Override
+                                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                                    if (dataSnapshot.hasChildren()) {
+
+                                                        startActivity(new Intent(Login.this, Student.class));
+                                                        finish();
+
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                                }
+                                            });
+
+
+                                            dbRef.child("Admin").child(uid).addListenerForSingleValueEvent(new ValueEventListener() { //if a admin
+                                                @Override
+                                                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                                                    if (dataSnapshot.hasChildren()) {
+
+                                                        Toast.makeText(Login.this, "a Admin", Toast.LENGTH_LONG).show();
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                                }
+                                            });
+
+
+
+
+
+
+
+                                            startActivity(new Intent(Login.this, Student.class));
                                             finish();
+
+
                                         } else {
                                             Toast.makeText(Login.this, "Please verify your email address"
                                                     , Toast.LENGTH_LONG).show();

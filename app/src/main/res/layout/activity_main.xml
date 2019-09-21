@@ -8,12 +8,23 @@
     tools:context=".MainActivity">
 
 
+    <Button
+        android:id="@+id/btnSignup"
+        android:layout_width="282dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="456dp"
+        android:background="@drawable/buttongray"
+        android:text="Signup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="337dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="220dp"
         android:background="@drawable/edittextcurved"
         android:ems="10"
         android:freezesText="false"
@@ -25,12 +36,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="76dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="284dp"
+        android:text="Password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <EditText
         android:id="@+id/etPassword"
         android:layout_width="337dp"
         android:layout_height="42dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="256dp"
+        android:layout_marginTop="308dp"
         android:background="@drawable/edittextcurved"
         android:ems="10"
         android:hint="Password"
@@ -40,14 +61,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnSignup"
-        android:layout_width="282dp"
-        android:layout_height="49dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="372dp"
-        android:background="@drawable/buttongray"
-        android:text="Signup"
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="76dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="196dp"
+        android:text="Email"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,7 +76,7 @@
         android:layout_width="281dp"
         android:layout_height="49dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginTop="540dp"
         android:background="@drawable/buttongray"
         android:text="Login"
         app:layout_constraintStart_toStartOf="parent"
@@ -90,6 +110,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.377" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="145dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="132dp"
+        android:text="SignUp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="@color/com_facebook_button_background_color_focused_disabled"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

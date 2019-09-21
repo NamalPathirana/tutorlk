@@ -4,6 +4,9 @@
     <string name="title_activity_choice">Choice</string>
     <string name="drop_D">Ahotbrew.com - Dropdown</string>
     <string name="TPname">Name</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
     <string-array name="brew_array">
         <item>Student</item>
         <item>Tutor</item>

@@ -1,5 +1,10 @@
 package com.example.tutorlk.model;
 
+import android.content.Context;
+import android.content.Intent;
+
+import com.example.tutorlk.Tutor_portal;
+
 public class tutorDetails{
 
     private String email;
@@ -141,4 +146,17 @@ public class tutorDetails{
     public void setNotableRemarks(String notableRemarks) {
         this.notableRemarks = notableRemarks;
     }
+
+    public void OpentTuotrPortal(Context context, String name){      // function will open the correct user protal
+
+        String Tid=name;                                            //get user id
+        Intent intent=new Intent(context, Tutor_portal.class);
+        intent.putExtra("uid",Tid.trim());                   //set uid
+        context.startActivity(intent);
+
+
+    }
+
+
+
 }

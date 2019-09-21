@@ -4,22 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#D5FFFFFF"
     tools:context=".Tutor_form">
 
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toobar" />
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="86dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-37dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="380dp">
+            android:layout_height="380dp"
+            android:background="#00221515">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="217dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="96dp"
+                android:layout_marginTop="28dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/logo" />
 
             <TextView
                 android:id="@+id/textView"
@@ -152,7 +161,7 @@
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:hint="DD/MM/YY"
-                android:inputType="date|textPersonName"
+                android:inputType="date"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -253,11 +262,13 @@
 
             <ImageView
                 android:id="@+id/stdFromPic"
-                android:layout_width="155dp"
-                android:layout_height="125dp"
+                android:layout_width="179dp"
+                android:layout_height="122dp"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
                 tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="132dp"
-                tools:layout_editor_absoluteY="993dp"
                 tools:srcCompat="@tools:sample/avatars" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
