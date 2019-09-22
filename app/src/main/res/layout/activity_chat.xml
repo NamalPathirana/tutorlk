@@ -13,18 +13,19 @@
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        app:srcCompat="@drawable/ic_send"
         android:id="@+id/fab"
-        android:tint="@android:color/white"
-        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="58dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="585dp"
+
+        android:clickable="true"
+        android:focusable="true"
+        android:tint="@android:color/white"
         app:fabSize="mini"
-
-        android:focusable="true" />
-
+        app:srcCompat="@drawable/ic_send" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -38,38 +39,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-    <ImageView
-        android:id="@+id/emoji_button"
-        android:padding="4dp"
-        android:src="@drawable/smiley"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        />
-
-
-
-    <ImageView
-        android:id="@+id/submit_button"
-        android:padding="4dp"
-        android:src="@android:drawable/ic_menu_send"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-    />
-
-
     <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
         android:id="@+id/emojicon_edit_text"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/emoji_button"
-        android:layout_toStartOf="@+id/submit_button"
-        android:layout_width="match_parent"
+        android:layout_width="259dp"
         android:layout_height="wrap_content"
-        app:emojiconSize="28sp"
-        />
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/submit_button"
+        android:layout_toEndOf="@+id/emoji_button"
+        app:emojiconSize="28sp" />
 
     <ListView
         android:id="@+id/list_of_message"

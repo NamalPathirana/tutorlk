@@ -49,18 +49,6 @@
         />
 
 
-
-    <ImageView
-        android:id="@+id/submit_button"
-        android:padding="4dp"
-        android:src="@android:drawable/ic_menu_send"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        />
-
-
     <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
         android:id="@+id/emojicon_edit_text"
         android:layout_alignParentBottom="true"

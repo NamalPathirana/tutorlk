@@ -44,7 +44,7 @@ public class StudentChat extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat);
+        setContentView(R.layout.activity_tutor_chat);
 
         activity_main = (RelativeLayout)findViewById(R.id.chat_rel);
 
@@ -61,10 +61,10 @@ public class StudentChat extends AppCompatActivity {
 
         //Add Emoji
         emojiButton = (ImageView)findViewById(R.id.emoji_button);
-        submitButton = (ImageView)findViewById(R.id.submit_button);
+        submitButton = (ImageView)findViewById(R.id.fab);
         emojiconEditText = (EmojiconEditText)findViewById(R.id.emojicon_edit_text);
         emojIconActions = new EmojIconActions(getApplicationContext(),activity_main, emojiconEditText, emojiButton);
-        emojIconActions.ShowEmojIcon();
+//        emojIconActions.ShowEmojIcon(); removed from the activity
 
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override

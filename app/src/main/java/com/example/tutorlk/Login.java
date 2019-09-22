@@ -140,13 +140,6 @@ public class Login extends AppCompatActivity {
 
 
 
-
-
-
-                                            startActivity(new Intent(Login.this, Student.class));
-                                            finish();
-
-
                                         } else {
                                             Toast.makeText(Login.this, "Please verify your email address"
                                                     , Toast.LENGTH_LONG).show();
