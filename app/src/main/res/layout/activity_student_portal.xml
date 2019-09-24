@@ -144,9 +144,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignLeft="@+id/textView5"
                 android:layout_alignParentTop="true"
-                android:layout_marginLeft="284dp"
+                android:layout_marginLeft="275dp"
                 android:layout_marginTop="802dp"
-                android:text="Chat"
+                android:text="Report"
                 android:textColor="@android:color/holo_blue_bright"
                 android:textSize="18sp" />
 
@@ -266,28 +266,6 @@
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="742dp"
                 android:background="@drawable/ic_chat_black_24dp" />
-
-            <Button
-                android:id="@+id/btnTutorThumbesUp"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_width="69dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="118dp"
-                android:layout_marginTop="741dp"
-                android:background="@drawable/ic_thumb_up_black_24dp" />
-
-            <Button
-                android:id="@+id/btnTutorThumbesDown"
-                style="@style/Widget.AppCompat.Button.Borderless.Colored"
-                android:layout_width="60dp"
-                android:layout_height="49dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="215dp"
-                android:layout_marginTop="741dp"
-                android:background="@drawable/ic_thumb_down_black_24dp" />
 
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>

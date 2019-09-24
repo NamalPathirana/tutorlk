@@ -30,7 +30,7 @@
 
 
                     <com.github.siyamed.shapeimageview.CircularImageView
-                        android:id="@+id/TPpic"
+                        android:id="@+id/SPpic"
                         android:layout_width="150dp"
                         android:layout_height="150dp"
                         android:layout_gravity="center_horizontal"
@@ -42,7 +42,7 @@
 
 
                     <TextView
-                        android:id="@+id/TPheaderName"
+                        android:id="@+id/SPheaderName"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
@@ -53,96 +53,7 @@
                         android:textStyle="bold" />
                 </LinearLayout>
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="400dp"
-                    android:layout_height="120dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="275dp">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Likes"
-                                android:textSize="20sp" />
-
-                            <TextView
-                                android:id="@+id/TPheaderLikes"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="10dp"
-                                android:text=""
-                                android:textColor="@color/startblue"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Dislikes"
-                                android:textSize="20sp" />
-
-                            <TextView
-                                android:id="@+id/TPheaderDisLikes"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="10dp"
-                                android:text=""
-                                android:textColor="@color/startblue"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Views"
-                                android:textSize="20sp" />
-
-                            <TextView
-                                android:id="@+id/TPheaderViews"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:paddingTop="10dp"
-                                android:text=""
-                                android:textColor="@color/startblue"
-                                android:textSize="20sp"
-                                android:textStyle="bold" />
-
-                        </LinearLayout>
-                    </LinearLayout>
-
-                </androidx.cardview.widget.CardView>
             </RelativeLayout>
 
             <LinearLayout
@@ -155,10 +66,10 @@
 
 
                 <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingLeft="25dp">
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="25dp">
 
 
                     <TextView
@@ -167,28 +78,28 @@
                         android:text="Email"
                         android:textAlignment="viewEnd" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:paddingLeft="25dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="36dp"
-                        app:srcCompat="@drawable/ic_email_black_24dp" />
-
-
-                    <TextView
-                        android:id="@+id/TPemail"
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:paddingLeft="20dp"
-                        android:text=""
-                        android:textStyle="bold" />
+                        android:orientation="horizontal"
+                        android:paddingLeft="25dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="36dp"
+                            app:srcCompat="@drawable/ic_email_black_24dp" />
+
+
+                        <TextView
+                            android:id="@+id/SPemail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text=""
+                            android:textStyle="bold" />
+                    </LinearLayout>
                 </LinearLayout>
-            </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -218,7 +129,7 @@
 
 
                         <EditText
-                            android:id="@+id/TPphoneNumber"
+                            android:id="@+id/SPphoneNumber"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -256,7 +167,7 @@
 
 
                         <EditText
-                            android:id="@+id/TPname"
+                            android:id="@+id/SPname"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -296,7 +207,7 @@
 
 
                         <EditText
-                            android:id="@+id/TPnic"
+                            android:id="@+id/SPnic"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -334,7 +245,7 @@
 
 
                         <EditText
-                            android:id="@+id/TPDOB"
+                            android:id="@+id/SPDOB"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -355,7 +266,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="21dp"
-                        android:text="educationQualification"
+                        android:text="educationalSate"
                         android:textAlignment="viewEnd" />
 
                     <LinearLayout
@@ -372,7 +283,7 @@
 
 
                         <EditText
-                            android:id="@+id/TPeducationQulify"
+                            android:id="@+id/SPeducationQulify"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
@@ -410,88 +321,12 @@
 
 
                         <EditText
-                            android:id="@+id/TPaddress"
+                            android:id="@+id/SPaddress"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:paddingLeft="20dp"
-                            android:text="+266 225 225"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="30dp"
-                    android:paddingLeft="25dp">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:text="qualified first subject"
-                        android:textAlignment="viewEnd" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingLeft="25dp">
-
-                        <ImageView
-
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            app:srcCompat="@drawable/ic_track_changes_black_24dp" />
-
-
-                        <EditText
-                            android:id="@+id/TPsub1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:paddingLeft="20dp"
-                            android:text="sub1"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginTop="30dp"
-                    android:paddingLeft="25dp">
-
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="21dp"
-                        android:text="qualified second subject"
-                        android:textAlignment="viewEnd" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingLeft="25dp">
-
-                        <ImageView
-
-                            android:layout_width="36dp"
-                            android:layout_height="36dp"
-                            app:srcCompat="@drawable/ic_track_changes_black_24dp" />
-
-
-                        <EditText
-                            android:id="@+id/TPsub2"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_vertical"
-                            android:paddingLeft="20dp"
-                            android:text="sub2"
+                            android:text=""
                             android:textStyle="bold" />
                     </LinearLayout>
                 </LinearLayout>
@@ -524,7 +359,7 @@
 
 
                         <EditText
-                            android:id="@+id/TPNotableRemarks"
+                            android:id="@+id/SPNotableRemarks"
                             android:layout_width="257dp"
                             android:layout_height="154dp"
                             android:background="@android:drawable/editbox_background"
@@ -552,7 +387,7 @@
                 android:paddingLeft="25dp">
 
                 <ProgressBar
-                    android:id="@+id/TPprogressbar"
+                    android:id="@+id/SPprogressbar"
                     style="?android:attr/progressBarStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -561,7 +396,7 @@
                     android:visibility="gone" />
 
                 <Button
-                    android:id="@+id/btnTPupdate"
+                    android:id="@+id/btnSPupdate"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:layout_gravity="center_horizontal"
@@ -576,7 +411,7 @@
 
 
                 <Button
-                    android:id="@+id/btnTPremoveAcc"
+                    android:id="@+id/btnSPremoveAcc"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:layout_gravity="center_horizontal"

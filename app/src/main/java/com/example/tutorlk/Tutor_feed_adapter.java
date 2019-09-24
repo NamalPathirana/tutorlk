@@ -45,8 +45,8 @@ public class Tutor_feed_adapter extends RecyclerView.Adapter<com.example.tutorlk
     public static class ExampleViewHolder extends RecyclerView.ViewHolder{
         public ImageView mimageView;
         public TextView mTextView1;
-        public TextView  mTextView2;
-
+        public TextView mTextView2;
+        public TextView likesTutorTab;
 
         public ExampleViewHolder(View itemView, final com.example.tutorlk.Tutor_feed_adapter.onItemClickLIstner listener) {
             super(itemView);
@@ -54,6 +54,7 @@ public class Tutor_feed_adapter extends RecyclerView.Adapter<com.example.tutorlk
             mimageView=itemView.findViewById(R.id.tutor_image);
             mTextView1=itemView.findViewById(R.id.tutor_edu_type);
             mTextView2=itemView.findViewById(R.id.tutor_expt);
+            likesTutorTab=itemView.findViewById(R.id.TutorTabLikes);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -111,6 +112,7 @@ public class Tutor_feed_adapter extends RecyclerView.Adapter<com.example.tutorlk
         Picasso.get().load(currentTutor.getImageUrl()).into(holder.mimageView);
         holder.mTextView1.setText(currentTutor.getName());
         holder.mTextView2.setText(currentTutor.getEducationQualification());
+        holder.likesTutorTab.setText(String.valueOf(currentTutor.getViews()));  // change the integers to strings(only accepts chars )
 
     }
 
@@ -119,5 +121,10 @@ public class Tutor_feed_adapter extends RecyclerView.Adapter<com.example.tutorlk
         return mTutorList.size();
 
     }
+
+
+
+
+
 }
 

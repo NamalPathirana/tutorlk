@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.tutorlk.model.index;
 import com.example.tutorlk.model.tutorDetails;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -64,8 +65,7 @@ public class Student_form extends AppCompatActivity {
 
         final String uid=firebaseAuth.getCurrentUser().getUid();
 
-        mStorageRef = FirebaseStorage.getInstance().getReference("profilePics");
-//        mDatabaseRef = FirebaseDatabase.getInstance().getReference("uploads");  //in video
+        mStorageRef = FirebaseStorage.getInstance().getReference("profilePics"); // storage path of the image
 
         mButtonChooseImage=findViewById(R.id.btnstdFormUploadPic);
         mProgressBar=findViewById(R.id.btnstdFormprogressbar);
@@ -180,6 +180,7 @@ public class Student_form extends AppCompatActivity {
                                     Student_tab sob= new Student_tab();
 
 
+
                                     sob.setUid(uid);
                                     sob.setImageUrl(downloadUrl.toString());
                                     sob.setEmail(email);                                                            //email will be added from the previous activ
@@ -192,9 +193,11 @@ public class Student_form extends AppCompatActivity {
                                     sob.setNic(nic.getText().toString().trim());
 
 
-
-                                    dbRef= FirebaseDatabase.getInstance().getReference().child("Student").child(uid);
+                                    dbRef= FirebaseDatabase.getInstance().getReference().child("Student").child(uid); // set the student information
                                     dbRef.setValue(sob);
+
+
+
                                     Intent intent=new Intent(Student_form.this,Login.class);
                                     startActivity(intent);
 

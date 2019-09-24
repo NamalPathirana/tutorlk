@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.tutorlk.model.index;
 import com.example.tutorlk.model.chatMessage;
 import com.firebase.ui.auth.AuthUI;
 import com.firebase.ui.database.FirebaseListAdapter;
@@ -30,6 +31,7 @@ public class TutorChat extends AppCompatActivity {
     RelativeLayout activity_main;
     FloatingActionButton fab;
     String studentID,tutorID,chatID;                                   //user varibles for the chat
+    index index;                                                       //index for search
 
     //Add Emojicon
     EmojiconEditText emojiconEditText;

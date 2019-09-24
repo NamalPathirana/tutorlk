@@ -50,23 +50,7 @@ public class Student extends AppCompatActivity {
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container_std,new TutorFrag()).commit();
 
-        //---------Signout---------((( onclick don't work for items on the toolbar)))
 
-//        Button userLogout=(Button) findViewById(R.id.btnSignout);
-//
-//        userLogout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                FirebaseAuth.getInstance().signOut();
-//                Intent intent = new Intent(Tutor.this, MainActivity.class);
-//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
-//                startActivity(intent);
-//            }
-//        });
-
-
-        //---------Signout---------
 
 
     }
@@ -117,7 +101,7 @@ public class Student extends AppCompatActivity {
 
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {     // check the menu dropbox
 
         int id =item.getItemId();
 
@@ -154,7 +138,7 @@ public class Student extends AppCompatActivity {
         }
         else if(id==R.id.account) {
             Toast.makeText(this, "accounts", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(Student.this,tutorProfile.class);
+            Intent intent = new Intent(Student.this,StudentProfile.class);
             startActivity(intent);
         }
 

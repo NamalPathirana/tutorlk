@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.tutorlk.model.tutorDetails;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -25,6 +26,9 @@ public class Tutor_portal extends AppCompatActivity {
     TextView address,email,DOB,remarks,headername,name,sub1,sub2,phoneNumber;
     Button btnChat,btnLike,btnDisLike,btnReport;
     String tutorID;
+    DatabaseReference dbRef,dbUpdate;
+    public tutorDetails tutor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +37,16 @@ public class Tutor_portal extends AppCompatActivity {
 
         Intent intent=getIntent();
 
-        String uid=intent.getStringExtra("uid");
+        final String  uid=intent.getStringExtra("uid");
 
         System.out.println(uid+" uid !!!!!!!!!!!!++++!!!!+++!!!");
 
         tutorID=uid;
 
         btnChat=(Button) findViewById(R.id.btnTutorChat);
+        btnLike=findViewById(R.id.btnStudentThumbesUp);
 
+        tutor=new tutorDetails(); // tutor object
 
         DatabaseReference readRef= FirebaseDatabase.getInstance().getReference().child("Tutor").child(uid);
 
@@ -64,6 +70,25 @@ public class Tutor_portal extends AppCompatActivity {
                     phoneNumber=findViewById(R.id.tutorPortalPhoneNumber);
 
 
+                    //create a tutor object to make updates possible.(using the object)
+
+                    tutor.setImageUrl(dataSnapshot.child("imageUrl").getValue().toString());
+                    tutor.setName(dataSnapshot.child("name").getValue().toString());
+                    tutor.setEducationQualification(dataSnapshot.child("educationQualification").getValue().toString());
+                    tutor.setAddress(dataSnapshot.child("address").getValue().toString());
+                    tutor.setEmail(dataSnapshot.child("email").getValue().toString());
+                    tutor.setDateOfBirth(dataSnapshot.child("dateOfBirth").getValue().toString());
+                    tutor.setNotableRemarks(dataSnapshot.child("notableRemarks").getValue().toString());
+                    tutor.setSub1(dataSnapshot.child("sub1").getValue().toString());
+                    tutor.setSub2(dataSnapshot.child("sub2").getValue().toString());
+                    tutor.setPhoneNumber(Integer.parseInt(dataSnapshot.child("phoneNumber").getValue().toString()));
+                    tutor.setViews(Integer.parseInt(dataSnapshot.child("views").getValue().toString()));
+                    tutor.setLikes(Integer.parseInt(dataSnapshot.child("likes").getValue().toString()));
+                    tutor.setDisLikes(Integer.parseInt(dataSnapshot.child("disLikes").getValue().toString()));
+                    tutor.setUid(dataSnapshot.child("uid").getValue().toString());
+                    tutor.setNic(dataSnapshot.child("nic").getValue().toString());
+
+
 
                     Picasso.get().load(dataSnapshot.child("imageUrl").getValue().toString()).into(stupic);
                     name.setText(dataSnapshot.child("name").getValue().toString());
@@ -77,6 +102,15 @@ public class Tutor_portal extends AppCompatActivity {
                     sub2.setText(dataSnapshot.child("sub2").getValue().toString());
                     phoneNumber.setText(dataSnapshot.child("phoneNumber").getValue().toString());
 
+                    //System.out.println(tutor);
+
+                    int currentViews=Integer.parseInt(dataSnapshot.child("views").getValue().toString()); //update views
+                    System.out.println(currentViews);
+                    currentViews=currentViews+1;
+
+                    tutor.setViews(currentViews);
+                    addView(uid,tutor);
+                    updataTutor(uid,tutor);
 
                 } else
                     Toast.makeText(getApplicationContext(), "No source to Display", Toast.LENGTH_SHORT).show();
@@ -103,16 +137,7 @@ public class Tutor_portal extends AppCompatActivity {
 
 
 
-//        int index=getindex(id,studentListDB);
-//        Student_tab Student=studentListDB.get(index);
 
-
-
-
-
-//        stu_pic.setImageResource(Student.getmImageResource());     // use setImageResourse
-//        name.setText(Student.getmText1());
-//        edu.setText(Student.getmText2());
 
 
         btnChat.setOnClickListener(new View.OnClickListener() {
@@ -123,6 +148,18 @@ public class Tutor_portal extends AppCompatActivity {
                 Intent chat=new Intent(Tutor_portal.this, TutorChat.class);
                 chat.putExtra("tutorID",tutorID);
                 startActivity(chat);
+
+
+            }
+        });
+
+        btnLike.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                btnLike.setBackgroundResource(R.drawable.thumbsupblue);
+
 
 
             }
@@ -158,6 +195,53 @@ public class Tutor_portal extends AppCompatActivity {
 
 
     }
+
+    public void addView(String uid, final tutorDetails t){  // function to increment the tutors views don't work
+
+
+
+        dbRef=FirebaseDatabase.getInstance().getReference("Tutor").child(uid);
+
+        dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+                if(dataSnapshot.hasChildren()){
+
+
+
+                }
+                else
+                    Toast.makeText(Tutor_portal.this,"View addition faild",Toast.LENGTH_SHORT).show();
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+    }
+
+
+
+    public void updataTutor(final String uid,tutorDetails t){
+
+
+                dbUpdate = FirebaseDatabase.getInstance().getReference().child("Tutor").child(uid);
+                dbUpdate.setValue(t);
+
+
+
+    }
+
+
+
+
 
 
 }

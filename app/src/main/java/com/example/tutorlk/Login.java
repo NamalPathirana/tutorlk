@@ -51,7 +51,7 @@ public class Login extends AppCompatActivity {
         userLogin = findViewById(R.id.btnLogin);
         forgotPass = findViewById(R.id.btnUserForgottPass);
 
-        toolbar.setTitle("Login");
+
 
         firebaseAuth = FirebaseAuth.getInstance();
 

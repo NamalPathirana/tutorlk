@@ -14,7 +14,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".TutorChat"></activity>
+        <activity android:name=".StudentProfile"></activity>
+        <activity android:name=".TutorChat" />
         <activity android:name=".Tutor_portal" />
         <activity android:name=".Student" />
         <activity android:name=".StudentChat" />

@@ -115,7 +115,7 @@
                 android:background="@android:drawable/editbox_background"
                 android:ems="10"
                 android:inputType="number|textPersonName"
-                android:text="+94"
+                android:hint="+94"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 

@@ -23,6 +23,27 @@ public class tutorDetails{
     private int views=0;
     private String uid;
 
+    @Override
+    public String toString() {
+        return "tutorDetails{" +
+                "email='" + email + '\'' +
+                ", imageUrl='" + imageUrl + '\'' +
+                ", name='" + name + '\'' +
+                ", nic='" + nic + '\'' +
+                ", dateOfBirth='" + dateOfBirth + '\'' +
+                ", educationQualification='" + educationQualification + '\'' +
+                ", address='" + address + '\'' +
+                ", sub1='" + sub1 + '\'' +
+                ", sub2='" + sub2 + '\'' +
+                ", notableRemarks='" + notableRemarks + '\'' +
+                ", phoneNumber=" + phoneNumber +
+                ", likes=" + likes +
+                ", disLikes=" + disLikes +
+                ", views=" + views +
+                ", uid='" + uid + '\'' +
+                '}';
+    }
+
     public tutorDetails(){};
 
     public String getUid() {
